@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Krause Branding</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v3_1.min.css"></link>
+    <script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v3_1.min.js"></script>
+</head>
+<body>
+    <main>
+        <neodigm-carousel id="my-carousel">
+            <section>
+                <section data-n55-carousel-page-name="PageOne">
+                    <h6>Page Tab Region 1</h6>
+                </section>
+                <section data-n55-carousel-page-name="PageTwo"
+                data-n55-cloak="true">
+                    <h6>Page Tab Region 2</h6>
+                </section>
+            </section>
+        </neodigm-carousel>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "next"}'>Next</a>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "prev"}'>Prev</a>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "random"}'>Random</a>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "1"}'>Page One</a>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "PageTwo"}'>Page Two</a>
+        <a data-n55-carousel-nav='{"id": "my-carousel", "nav": "resize"}'>Resize</a>
+        
+        <script>
+        neodigmCarousel.setOnAfterNav( ()=>{neodigmToast.q('Page 2 Name', 'warning');}, 'my-carousel', 'PageTwo' )
+        </script>
+    </main>
+</body>
+</html>
